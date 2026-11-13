@@ -1,0 +1,8 @@
+project: savantenvs/snapraid
+target: snapraid_gen_conf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snapraid_gen_conf/testsuite
+cmds:
+  - cmd: /mayhem/obj/san/snapraid --gen-conf @@
+    timeout: 30
